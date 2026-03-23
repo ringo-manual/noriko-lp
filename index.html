@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>借金を繰り返す子どもは、だらしないんじゃない。｜典子</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@600;700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green: #2D6A4F;
+    --green-dark: #1B4332;
+    --green-light: #40916C;
+    --cream: #FDFAF3;
+    --cream-dark: #F5EFE0;
+    --dark: #1A1A1A;
+    --text: #2D2A26;
+    --text-light: #7A7268;
+    --white: #FFFFFF;
+    --border: #E0D8CC;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    line-height: 2;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .sec { padding: 64px 20px; text-align: center; }
+  .sec-white { background: var(--white); }
+  .sec-cream { background: var(--cream); }
+  .sec-cream-dark { background: var(--cream-dark); }
+  .inner { max-width: 520px; margin: 0 auto; }
+
+  .t-hero {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 28px; font-weight: 900; line-height: 1.7;
+    margin-bottom: 24px;
+  }
+  .t-xl {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 24px; font-weight: 700; line-height: 1.7;
+    margin-bottom: 20px;
+  }
+  .t-lg { font-size: 20px; font-weight: 700; line-height: 1.7; margin-bottom: 16px; }
+  .t-md { font-size: 17px; font-weight: 700; line-height: 1.8; margin-bottom: 12px; }
+  .t-body { font-size: 15px; line-height: 2.2; margin-bottom: 24px; text-align: center; }
+  .t-sm { font-size: 13px; color: var(--text-light); line-height: 1.8; }
+  .t-center { text-align: center; }
+  .t-green { color: var(--green); }
+  .t-bold { font-weight: 700; }
+
+  .heading-box {
+    border-top: 3px solid var(--green);
+    border-bottom: 3px solid var(--green);
+    padding: 20px 16px;
+    margin-bottom: 28px;
+    display: inline-block;
+  }
+  .heading-box .t-xl { margin-bottom: 0; }
+
+  .pill {
+    display: inline-block;
+    font-size: 11px; font-weight: 700;
+    color: var(--green); letter-spacing: 0.2em;
+    padding: 4px 20px;
+    border: 1px solid var(--green);
+    border-radius: 20px;
+    margin-bottom: 20px;
+  }
+
+  .quote {
+    border-left: 4px solid var(--green);
+    padding: 24px;
+    background: var(--white);
+    margin: 28px 0;
+    border-radius: 0 8px 8px 0;
+    text-align: center;
+    box-shadow: 0 2px 12px rgba(45,106,79,0.08);
+  }
+
+  .card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 28px 24px;
+    border: 1px solid var(--border);
+    margin-bottom: 24px;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  }
+  .card-highlight {
+    background: var(--cream-dark);
+    border-left: 4px solid var(--green);
+    padding: 24px;
+    margin: 28px 0;
+    border-radius: 0 8px 8px 0;
+    text-align: center;
+    font-size: 15px; line-height: 2.2;
+  }
+
+  .reason {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px 24px;
+    margin-bottom: 24px;
+    text-align: center;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  }
+  .reason-num {
+    display: inline-block;
+    background: var(--green); color: white;
+    font-weight: 900; font-size: 12px;
+    padding: 4px 14px; border-radius: 20px;
+    margin-bottom: 12px;
+  }
+  .reason h3 { font-size: 17px; font-weight: 900; margin-bottom: 10px; }
+  .reason p { font-size: 14px; line-height: 2; }
+
+  .scene {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 28px 24px;
+    margin-bottom: 20px;
+    border-left: 4px solid var(--green);
+    text-align: center;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  }
+  .scene.fear { border-left-color: #8B4513; background: #FFFAF5; }
+  .scene-label { color: var(--green-dark); font-weight: 700; font-size: 14px; margin-bottom: 8px; }
+  .scene.fear .scene-label { color: #8B4513; }
+  .scene p { font-size: 15px; line-height: 2.2; }
+
+  .step {
+    display: flex; gap: 16px; align-items: flex-start;
+    margin-bottom: 24px; text-align: left;
+  }
+  .step-num {
+    background: var(--green); color: white;
+    font-weight: 900; font-size: 14px;
+    min-width: 44px; height: 44px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .step-body h3 { font-size: 16px; font-weight: 900; margin-bottom: 4px; }
+  .step-body p { font-size: 14px; line-height: 1.9; color: var(--text); }
+
+  .bonus-list {
+    background: var(--white);
+    border: 2px solid var(--green);
+    border-radius: 12px;
+    padding: 28px 24px;
+    margin-top: 24px;
+  }
+  .bonus-item {
+    display: flex; align-items: center; gap: 12px;
+    padding: 12px 14px;
+    background: var(--cream);
+    border-radius: 8px;
+    margin-bottom: 10px;
+    font-size: 14px; font-weight: 700;
+  }
+  .bonus-item:last-child { margin-bottom: 0; }
+  .bonus-num {
+    background: var(--green); color: white;
+    font-weight: 900; font-size: 12px;
+    min-width: 26px; height: 26px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .voice-bubble {
+    background: #FDFAF3;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  }
+  .voice-tag {
+    display: inline-block;
+    font-size: 11px; font-weight: 700;
+    color: var(--green);
+    background: var(--cream-dark);
+    padding: 2px 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  .voice-bubble p { font-size: 14px; line-height: 2; }
+  .voice-meta { font-size: 12px; color: var(--text-light); margin-top: 10px; }
+
+  .cta-area { padding: 52px 20px; text-align: center; }
+  .cta-btn {
+    display: block;
+    background: linear-gradient(135deg, var(--green), var(--green-dark));
+    color: white; text-align: center;
+    padding: 22px 20px; border-radius: 12px;
+    font-size: 18px; font-weight: 900;
+    text-decoration: none; line-height: 1.5;
+    max-width: 480px; margin: 0 auto;
+    box-shadow: 0 8px 28px rgba(45,106,79,0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .cta-btn:hover { transform: translateY(-3px); box-shadow: 0 12px 36px rgba(45,106,79,0.4); }
+  .cta-sub { font-size: 13px; font-weight: 500; opacity: 0.9; margin-top: 4px; }
+  .cta-note { font-size: 12px; color: var(--text-light); margin-top: 10px; }
+
+  .price-box {
+    background: var(--cream);
+    border: 2px solid var(--green);
+    border-radius: 16px;
+    padding: 36px 24px;
+    text-align: center;
+    margin: 28px 0;
+    position: relative;
+  }
+  .price-box::before {
+    content:''; position:absolute; top:0; left:0; right:0; height:4px;
+    background: linear-gradient(90deg, var(--green), var(--green-dark), var(--green));
+    border-radius: 16px 16px 0 0;
+  }
+  .price-amount {
+    font-size: 52px; font-weight: 900; color: var(--green); line-height: 1;
+    margin: 12px 0 8px;
+  }
+
+  .compare-table {
+    width:100%; border-collapse:separate; border-spacing:0;
+    margin-bottom:24px; font-size:13px; border-radius:12px;
+    overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,0.04);
+  }
+  .compare-table th,.compare-table td {
+    padding:12px 12px; border-bottom:1px solid var(--border); text-align:center;
+  }
+  .compare-table th { background:var(--cream-dark); font-size:12px; font-weight:700; }
+  .compare-table td { background:var(--white); }
+  .compare-table .hl { background:rgba(45,106,79,0.08); font-weight:900; color:var(--green-dark); }
+
+  .qa-item { margin-bottom:20px; text-align:center; }
+  .qa-q {
+    background: linear-gradient(135deg, var(--green), var(--green-dark));
+    color:white; padding:18px 24px;
+    border-radius:12px 12px 0 0;
+    font-weight:700; font-size:15px;
+  }
+  .qa-a {
+    background:var(--white); padding:20px 24px;
+    border-radius:0 0 12px 12px;
+    border:1px solid var(--border); border-top:none;
+    font-size:15px; line-height:2.1; text-align:center;
+  }
+
+  .ps { background:var(--cream-dark); padding:32px 20px; }
+  .ps-inner { max-width:520px; margin:0 auto; font-size:14px; line-height:2.2; text-align:left; }
+
+  .fade-in { opacity:0; transform:translateY(24px); transition:opacity 0.7s ease, transform 0.7s ease; }
+  .fade-in.visible { opacity:1; transform:none; }
+
+  @media(max-width:600px) {
+    .sec { padding:40px 18px; }
+    .t-hero { font-size:24px; }
+    .t-xl { font-size:20px; }
+    .t-lg { font-size:18px; }
+    .t-body { font-size:14px; }
+    .price-amount { font-size:40px; }
+    .cta-btn { font-size:16px; padding:20px 18px; }
+  }
+  @media(min-width:768px) {
+    .inner { max-width:520px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ====== HERO：SEC01+SEC02 ====== -->
+<div class="sec sec-cream">
+  <div class="inner">
+    <p class="t-hero">
+      叱っても、泣いても、<br>
+      立て替えても止まらない。<br><br>
+      <span class="t-green">それは「だらしなさ」じゃない。<br>
+      依存です。</span>
+    </p>
+    <p class="t-center" style="margin-top:16px;font-size:16px;line-height:2">
+      子どもが本当のことを言わなくても、<br>
+      親が主導権を取り戻して<br>
+      借金問題を終わらせる。<br><br>
+      その方法を、すべてまとめました。
+    </p>
+  </div>
+</div>
+
+<!-- ====== SEC03: ベネフィットリスト ====== -->
+<div class="sec sec-white fade-in">
+  <div class="inner">
+    <p class="t-lg t-green">この教材を読むと</p>
+    <div class="card">
+      <p class="t-body" style="text-align:left">
+        ・「だらしない子」だと思っていた認識が変わり、<br>&nbsp;&nbsp;叱らなくていいとわかって気持ちが楽になる<br><br>
+        ・立て替えるべきか、毎回悩まなくなる。<br>&nbsp;&nbsp;明確な判断基準が手に入る<br><br>
+        ・子どもが嘘をついても、振り回されなくなる。<br>&nbsp;&nbsp;嘘のパターンが全部わかるから<br><br>
+        ・「で、結局どうすればいいの？」が消える。<br>&nbsp;&nbsp;手順が全部書いてあるから<br><br>
+        ・夜中にスマホで検索し続ける日が、終わる
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- CTA① -->
+<div class="cta-area sec-cream" style="padding-top:0">
+  <a href="https://buy.stripe.com/5kQ3cwf8W3iJ10pa77dMI0x" class="cta-btn">教材を手に入れる →<div class="cta-sub">決済完了後すぐにお届けします</div></a>
+  <p class="cta-note">クレジットカード対応｜9,800円（税込）</p>
+</div>
+
+<!-- ====== SEC06: 痛みの代弁 ====== -->
+<div class="sec sec-white fade-in">
+  <div class="inner">
+    <p class="t-xl">こんな経験、<br><span class="t-green">ありませんか？</span></p>
+    <div class="quote">
+      <p class="t-body" style="margin:0">「また借りたの？」<br>と聞いたら、黙られた。</p>
+    </div>
+    <div class="quote">
+      <p class="t-body" style="margin:0">「これで最後だから」を信じて<br>出したお金が、また消えた。</p>
+    </div>
+    <div class="quote">
+      <p class="t-body" style="margin:0">夫に相談しても「甘やかすな」で終わる。<br>でも実務対応するのは、いつも自分だけ。</p>
+    </div>
+    <div class="quote">
+      <p class="t-body" style="margin:0">夜、布団の中で<br>「息子 借金 親 どうする」と検索して、<br>答えが見つからないまま朝になる。</p>
+    </div>
+    <p class="t-body" style="margin-top:28px"><b>全部、私のことです。</b></p>
+  </div>
+</div>
+
+<!-- ====== SEC07: ビフォーストーリー ====== -->
+<div class="sec sec-cream fade-in">
+  <div class="inner">
+    <span class="pill">STORY</span>
+    <p class="t-xl">300万円、全部裏目に出ました。</p>
+    <div class="card">
+      <p class="t-body">私は63歳、パート勤務の普通の母親です。</p>
+      <p class="t-body">34歳の息子の借金を3回立て替えました。</p>
+      <p class="t-body">1回目、25万円。「これで最後」と言われて信じました。</p>
+      <p class="t-body">2回目、40万円。怒りながら出しました。でも止められなかった。</p>
+      <p class="t-body">3回目、35万円。もう何も言えませんでした。</p>
+      <div class="card-highlight">合計300万円。<br>全部、裏目に出ました。<br><br>立て替えるたびに、息子の中に<br>「困ったら母親が払ってくれる」という前例ができていた。<br>私は助けていたんじゃない。<br><strong class="t-green">悪化させていたんです。</strong></div>
+      <p class="t-body">でも、ある事実に気づいてから、すべてが変わりました。</p>
+      <p class="t-body"><b>息子は「だらしない」んじゃなかった。<br><span class="t-green">依存状態だったんです。</span></b></p>
+    </div>
+  </div>
+</div>
+
+<!-- ====== SEC08: 既存解決策の否定 ====== -->
+<div class="sec sec-white fade-in">
+  <div class="inner">
+    <span class="pill">TRUTH</span>
+    <p class="t-xl"><span class="t-green">「確認しましょう」では<br>解決しません。</span></p>
+    <div class="reason"><div class="reason-num">よくあるアドバイス 1</div><h3>「書類を全部見せてもらいましょう」</h3><p>→ 見せません。管理されることを一番嫌います。「じゃあいい」と言って離れます。</p></div>
+    <div class="reason"><div class="reason-num">よくあるアドバイス 2</div><h3>「法テラスに一緒に行きましょう」</h3><p>→ 行きません。子どもは本当にどうしようもなくなるまで動きません。</p></div>
+    <div class="reason"><div class="reason-num">よくあるアドバイス 3</div><h3>「約束させましょう」</h3><p>→ 約束は100%破られます。依存の引力は、意志の力では止められません。</p></div>
+    <p class="t-body" style="margin-top:28px">ネットで見つかるアドバイスは、<br>全部「子どもが協力する前提」で書かれています。</p>
+    <p class="t-body"><b class="t-green">でも、協力しないんです。<br>それが現実です。</b></p>
+    <p class="t-body">この教材では、<br><b>子どもが認めなくても、親が主導権を取って<br>解決に向かう方法</b>を書きました。</p>
+  </div>
+</div>
+
+<!-- ====== SEC09: アフターストーリー ====== -->
+<div class="sec sec-cream fade-in">
+  <div class="inner">
+    <span class="pill">AFTER</span>
+    <p class="t-xl">「依存」だと気づいた日から、<br><span class="t-green">対応が変わりました。</span></p>
+    <div class="scene"><p>叱るのをやめました。<br>立て替えるのもやめました。<br>でも、横にはいることをやめませんでした。</p></div>
+    <div class="scene"><p>現金は出さない。<br>でも「一緒に相談窓口に行くなら、交通費は出す」と伝えました。</p></div>
+    <div class="scene"><p>息子はある時期から、<br>自分の体験をもとにしたコンテンツ制作に没頭するようになりました。<br>依存先が変わったんだと、後から気づきました。</p></div>
+    <div class="scene"><p>まだ道のりの途中です。<br>完全に解決したわけではありません。<br>でも、<strong class="t-green">明らかに方向が変わりました。</strong></p></div>
+  </div>
+</div>
+
+<!-- ====== SEC10: ロジックブリッジ ====== -->
+<div class="sec sec-white fade-in">
+  <div class="inner">
+    <span class="pill">EVIDENCE</span>
+    <p class="t-xl">「親が変われば子も変わる」は<br><span class="t-green">科学的に証明されています。</span></p>
+    <div class="card">
+      <p class="t-lg t-green">科学的に証明された家族介入法</p>
+      <p class="t-body">アメリカの大学で開発され、<br>日本の医療機関でも導入が進んでいる<br>家族向けの介入メソッドがあります。<br>家族の「接し方」を変えるだけで、<br>治療を拒否していた本人が<br>自発的に治療を始める。</p>
+      <p style="font-size:40px;font-weight:900;color:var(--green);margin:16px 0">成功率 64〜86%</p>
+      <p class="t-sm">※米国の複数の大学による研究データ</p>
+    </div>
+    <p class="t-body">叱っても、泣いても、条件を出しても動かなかった人が、<br>家族の接し方が変わっただけで、<br>自分から相談窓口に向かうようになる。</p>
+    <p class="t-body"><b>この教材は、<br>この介入法の考え方を取り入れた<br>親のための実践マニュアルです。</b></p>
+  </div>
+</div>
+
+<!-- ====== SEC11: 社会的証明 ====== -->
+<div class="sec sec-cream fade-in">
+  <div class="inner">
+    <span class="pill">VOICE</span>
+    <p class="t-xl"><span class="t-green">同じ経験をした方</span>からの声</p>
+    <div class="voice-bubble">
+      <span class="voice-tag">息子のギャンブル依存に悩んでいた方</span>
+      <p>「立て替えるのをやめたら、息子が自分からGAに行きました。もっと早くこの考え方を知りたかった。」</p>
+      <div class="voice-meta">60代・母親</div>
+    </div>
+    <div class="voice-bubble">
+      <span class="voice-tag">娘の買い物依存に悩んでいた方</span>
+      <p>「だらしないんじゃなくて依存だと知った瞬間、怒りが消えました。怒っても意味がなかったとわかったから。」</p>
+      <div class="voice-meta">50代・母親</div>
+    </div>
+  </div>
+</div>
+
+<!-- ====== SEC12: 恐怖訴求 ====== -->
+<div class="sec sec-cream-dark fade-in">
+  <div class="inner">
+    <span class="pill">WARNING</span>
+    <p class="t-xl">このまま何もしなければ、<br><span class="t-green">何が起きるか。</span></p>
+    <div class="scene fear"><div class="scene-label">次の電話が来たとき</div><p>子どもから「今日中に必要」と連絡が来る。また感情で立て替えてしまう。また裏目に出る。同じループが、永遠に続きます。</p></div>
+    <div class="scene fear"><div class="scene-label">1回の判断ミスで失うもの</div><p>立て替え1回で50万〜100万円。それだけではない。夫婦関係、あなた自身の健康、老後の資金。感情で動いた代償は、お金だけでは済みません。</p></div>
+    <div class="scene fear"><div class="scene-label">知らないまま過ぎる時間</div><p>子どもの借金は、放置するほど膨らみます。利息は毎日増えます。半年後には今より確実に状況は悪化しています。</p></div>
+  </div>
+</div>
+
+<!-- ====== SEC13: 希望訴求 ====== -->
+<div class="sec sec-white fade-in">
+  <div class="inner">
+    <span class="pill">FUTURE</span>
+    <p class="t-xl">逆に、<span class="t-green">知っている親</span>は<br>こう動けます。</p>
+    <div class="scene"><p>子どもから「お金がほしい」と言われても、慌てない。<br>判断基準があるから。<br>出すべきか、出さないべきか。3秒で決められる。</p></div>
+    <div class="scene"><p>嘘をつかれても、振り回されない。<br>パターンを知っているから。<br>「また同じだな」と冷静に対応できる。</p></div>
+    <div class="scene"><p>夫に「こういう状況で、私はこう動く」と<br>数字で説明できる。<br>「甘やかすな」で終わらなくなる。</p></div>
+    <div class="scene"><p>夜のスマホ検索が止まる。<br>やるべきことが見えているから。<br>「次に何をすればいいか」が、もう全部わかっている。</p></div>
+  </div>
+</div>
+
+<!-- ====== SEC15: 商品内容 ====== -->
+<div class="sec sec-cream fade-in">
+  <div class="inner">
+    <span class="pill">CONTENTS</span>
+    <p class="t-xl">教材の中身を<br><span class="t-green">すべて公開します。</span></p>
+    <div class="step"><div class="step-num">1</div><div class="step-body"><h3>あなたの子どもは「だらしない」んじゃない</h3><p>借金を繰り返す本当の理由。依存というフレームで見ると、すべてが変わります。</p></div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-body"><h3>なぜ繰り返すのか。依存のメカニズム</h3><p>脳の報酬系の仕組み。「もう二度としない」が破られる科学的な理由。</p></div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-body"><h3>原因は「育て方」じゃない。「受け取り方」だった</h3><p>同じ家庭で兄弟が違う結果になる理由。あなたのせいじゃない。でも、知る必要がある。</p></div></div>
+    <div class="step"><div class="step-num">4</div><div class="step-body"><h3>子どもは絶対に本当のことを言わない</h3><p>嘘のパターン5つと、その心理構造。息子側のリアルな本音。</p></div></div>
+    <div class="step"><div class="step-num">5</div><div class="step-body"><h3>「確認しましょう」では解決しない理由</h3><p>成功率64〜86%の家族介入法の考え方と、確認できなくてもやれること。</p></div></div>
+    <div class="step"><div class="step-num">6</div><div class="step-body"><h3>解決は「依存先を変える」こと</h3><p>成功事例3つ。さいがた医療センターの筋トレプログラム、私の息子の回復、ギャマノン母親の事例。</p></div></div>
+    <div class="step"><div class="step-num">7</div><div class="step-body"><h3>親がやるべきこと・やってはいけないこと</h3><p>やるべき6つ、やってはいけない5つ、立て替えていい3つのケース。松本俊彦医師のメソッド。</p></div></div>
+    <div class="step"><div class="step-num">8</div><div class="step-body"><h3>手遅れになったときの初動マニュアル</h3><p>パニック時の8ステップ。法テラス、信用情報、自助グループ、すべての相談先リスト。</p></div></div>
+
+    <div class="bonus-list">
+      <p class="t-lg t-green t-center" style="margin-bottom:16px">購入者限定 3つの特典</p>
+      <div class="bonus-item"><span class="bonus-num">1</span>手遅れ時の初動チェックリスト（印刷用PDF）</div>
+      <div class="bonus-item"><span class="bonus-num">2</span>子どもの嘘パターン早見表（PDF）</div>
+      <div class="bonus-item"><span class="bonus-num">3</span>立て替え判断フローチャート（PDF）</div>
+    </div>
+  </div>
+</div>
+
+<!-- ====== SEC16: 価格提示 ====== -->
+<div class="sec sec-white fade-in">
+  <div class="inner">
+    <span class="pill">PRICE</span>
+    <p class="t-xl">価格について</p>
+
+    <table class="compare-table">
+      <tr><th>比較対象</th><th>費用</th></tr>
+      <tr><td>弁護士相談（1回）</td><td>5,000〜10,000円</td></tr>
+      <tr><td>依存症カウンセリング（1回）</td><td>10,000〜20,000円</td></tr>
+      <tr><td>立て替えミス（1回）</td><td>50万〜100万円</td></tr>
+      <tr class="hl"><td><b>この教材</b></td><td><b>9,800円（一度きり）</b></td></tr>
+    </table>
+
+    <div class="price-box">
+      <p class="t-sm">全8章＋特典3つ</p>
+      <div class="price-amount">¥9,800</div>
+      <p class="t-sm">税込｜一度のお支払いで永久閲覧</p>
+    </div>
+
+    <p class="t-body">この教材で、<br>次の立て替えミスを1回防げたら。<br><br>それだけで<b class="t-green">50万円以上の価値</b>があります。</p>
+  </div>
+</div>
+
+<!-- CTA② -->
+<div class="cta-area sec-cream">
+  <a href="https://buy.stripe.com/5kQ3cwf8W3iJ10pa77dMI0x" class="cta-btn">教材を手に入れる →<div class="cta-sub">決済完了後すぐにお届けします</div></a>
+  <p class="cta-note">クレジットカード対応｜9,800円（税込）</p>
+</div>
+
+<!-- ====== Q&A ====== -->
+<div class="sec sec-white fade-in">
+  <div class="inner">
+    <span class="pill">Q&A</span>
+    <p class="t-xl" style="margin-bottom:28px">よくある質問</p>
+    <div class="qa-item">
+      <div class="qa-q">子どもがギャンブル依存ではないのですが、役に立ちますか？</div>
+      <div class="qa-a">はい。買い物依存、夜のお店、ゲーム課金など、お金のかかる依存全般に対応しています。依存の構造はすべて同じです。</div>
+    </div>
+    <div class="qa-item">
+      <div class="qa-q">子どもが成人しています。親に何かできることはありますか？</div>
+      <div class="qa-a">できます。この教材で紹介している家族介入法は「家族の対応を変えることで本人を治療に繋げる」方法です。本人の年齢は関係ありません。</div>
+    </div>
+    <div class="qa-item">
+      <div class="qa-q">読み物ではなく、実際に使えますか？</div>
+      <div class="qa-a">はい。第7章の「やるべき6つ・やってはいけない5つ」、第8章の「初動8ステップ」は明日からそのまま使えます。特典のPDFは印刷して手元に置いておけます。</div>
+    </div>
+    <div class="qa-item">
+      <div class="qa-q">返金はできますか？</div>
+      <div class="qa-a">デジタルコンテンツのため、返金には対応しておりません。内容に自信がありますので、上記の目次と説明をよくお読みの上、ご判断ください。</div>
+    </div>
+  </div>
+</div>
+
+<!-- ====== SEC14+SEC17: 販売動機＋追伸 ====== -->
+<div class="ps">
+  <div class="ps-inner">
+    <p style="font-weight:700;margin-bottom:16px;text-align:center;font-size:16px">追伸</p>
+    <p>最後まで読んでくださり、ありがとうございます。</p>
+    <p style="margin-top:16px">正直に言います。</p>
+    <p style="margin-top:16px">この教材を作ったのは、誰かのためではなく、過去の自分のためです。</p>
+    <p style="margin-top:16px">夜中に一人でスマホを検索していた頃の自分に、「こうすればよかったんだよ」と教えてあげたかった。300万円を失う前の自分に、渡してあげたかった。</p>
+    <p style="margin-top:16px">もし今、あなたが同じ場所にいるなら。</p>
+    <p style="margin-top:16px"><b>一人で抱えないでください。</b></p>
+    <p style="margin-top:16px">子どもの借金問題に完璧な正解はありません。でも、<b style="color:var(--green)">「何もわからないまま感情で動くこと」だけは、確実に不正解です。</b></p>
+    <p style="margin-top:16px">この教材が、あなたの「次の一手」を見つける助けになることを願っています。</p>
+    <p style="margin-top:24px;text-align:right">田中典子</p>
+  </div>
+</div>
+
+<!-- 最終CTA -->
+<div class="cta-area sec-cream">
+  <a href="https://buy.stripe.com/5kQ3cwf8W3iJ10pa77dMI0x" class="cta-btn">教材を手に入れる →<div class="cta-sub">決済完了後すぐにお届けします</div></a>
+  <p class="cta-note">クレジットカード対応｜9,800円（税込）</p>
+</div>
+
+<div style="text-align:center;padding:24px;font-size:11px;color:var(--text-light)">
+  &copy; 2026 典子｜子どもの借金整理室
+</div>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting) entry.target.classList.add('visible');
+  });
+}, {threshold:0.15});
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
